@@ -1,0 +1,19 @@
+So in sorted arrays, you can look for indexes of numbers in array by using binarySearch().
+The rule for this is that the array should be sorted.
+If it's not found in the array set, the number will turn negative.
+
+For example,
+int[] numbers2 = {2,4,6,8};
+System.out.println(Arrays.binarySearch(numbers2, 4)); //looking for index of 4
+System.out.println(Arrays.binarySearch(numbers2, 3));
+
+prints:
+1
+-2
+
+The -2 in this case is because the number 3 is not in array set so it becomes -3 then you subtract -1 because indexes start from 0.
+binarySearch() can be useful in situations where you are playing a number game and you are figuring out the number that is missing.
+You can set up a loop to go through all the indexes and print each time the index by binarySearch() and see when it turns negative.
+
+
+
