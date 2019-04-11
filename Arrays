@@ -1,0 +1,35 @@
+int numbers   [] = {1,2,3};
+		// in making arrays you can do:
+		// type name[]
+		// type name   []
+		// type[] name
+		// type  [] name 
+		// you can put space in between type or variable.
+ 
+ But now, if you are assigning multiple arrays in one sentence, you need to be clear on the brackets.
+ For example:
+ int[] a, b; // would create two ints with type int[];
+ But, int a[], b; // would create one int[] a and one int b;
+ 
+ *Important
+ Array types are objects not primitives. So String[] or int[] are objects.
+ If you are to compare two objects with .equals() method, it would compare the pointer locations, not the elements.
+ String[] bugs = {"cricket", "beetle", "ladybug"};
+ String[] alias = bugs;
+ 
+ System.out.println(bugs.equals(alias)); // true. THIS COMPARES THE REFERENCE LOCATIONS OF TWO STRING OBJECTS!!
+                                         // Since bugs and alias are pointing to the same set of Strings, it will return true.
+ System.out.println(bugs.toString()); // [Ljava.lang.String;@160bc7c0
+ 
+Instance variables are given defaults if not assigned to any.
+String[] name; // null 
+String[] name2 = new String[2]; // {null, null}
+The second assignment has the potential to point to an Object. It means that you can cast it to a larger type Object[].
+
+Object[] object1 = name; // CANNOT DO because it's not an object! You have to instantiate name to do so.
+Object[] object2 = name2; // CAN Do because name2 is a String Object.
+
+
+
+
+ 
