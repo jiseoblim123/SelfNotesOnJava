@@ -15,5 +15,5 @@
  for (char current = 'A', current < 'Z', current++){
       alpha = alpha.append(current);
  }
- System.out.println(alpha);
+ System.out.println(alpha); 
  
