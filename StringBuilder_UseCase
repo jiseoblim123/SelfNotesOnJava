@@ -6,7 +6,9 @@
  }
  System.out.println(alpha);
  
- This would be a waste of memory because everytime you update current and assign it to alpha, the previous alpha loses a pointer making it eligible for garbage collection. In this particular case, it will continue to have memory waste until it prints all the alphabets and breaks out of the loop.
+ This would be a waste of memory because everytime you update current and assign it to alpha, the previous alpha loses a 
+ pointer making it eligible for garbage collection. In this particular case, it will continue to have memory waste until 
+ it prints all the alphabets and breaks out of the loop.
  
  StringBuilder is used in this case because StringBuilder is not immutable. 
  Like this:
