@@ -1,0 +1,19 @@
+ StringBuilder is mutable and is used for loops when strings has to be updated constantly.
+ For example, if you have to used loops to print say, alphabets by adding each characters from a to z like:
+ String alpha = "";
+ for (char current = 'A' , current < 'Z', current++){
+      alpha += current;
+ }
+ System.out.println(alpha);
+ 
+ This is such a waste of memory because verytime you update current and assign it to alpha, the previous alpha loses a pointer making it eligible for garbage collection. In this particular case, it will continue to have memory waste until it prints all the alphabets and breaks out of the loop.
+ 
+ StringBuilder is used in this case because StringBuilder is not immutable. 
+ Like this:
+ 
+ StringBuilder alpha = "";
+ for (char current = 'A', current < 'Z', current++){
+      alpha = alpha.append(current);
+ }
+ System.out.println(alpha);
+ 
