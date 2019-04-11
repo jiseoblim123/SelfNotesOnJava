@@ -2,6 +2,11 @@ So in sorted arrays, you can look for indexes of numbers in array by using binar
 The rule for this is that the array should be sorted.
 If it's not found in the array set, the number will turn negative.
 
+Binary search rules:
+1. Target element found in sorted array --> Index of match
+2. Target element not found in sorted array --> Negative value showing one smaller than the negative of index, where a match needs to be inserted to preserve sorted order
+3. Unsorted array --> A surprise—this result isn’t predictable
+
 For example,
 int[] numbers2 = {2,4,6,8};
 System.out.println(Arrays.binarySearch(numbers2, 4)); //looking for index of 4
