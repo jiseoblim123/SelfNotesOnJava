@@ -19,3 +19,5 @@
  }
  System.out.println(alpha); 
  
+Useful StringBuilder methods:
+charAt(), indexOf(), length(), and substring()
