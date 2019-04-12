@@ -39,4 +39,4 @@ relevant wrapper class for you. This is called autoboxing. Let’s look at an ex
 Line 5 autoboxes the double primitive into a Double object and adds that to the List.
 Line 6 shows that you can still write code the long way and pass in a wrapper object. Line
 7 again autoboxes into the wrapper object and passes it to remove(). Line 8 retrieves the
-Double and unboxes it into a double primitive.
+Double and unboxes it into a double primitive. 
