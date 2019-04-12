@@ -1,0 +1,93 @@
+public final void nap(int minutes) throws InterruptedException {
+ // take a nap;
+}
+
+Access Modifiers
+Java offers four choices of access modifi er:
+public The method can be called from any class.
+private The method can only be called from within the same class.
+protected The method can only be called from classes in the same package or subclasses.
+You’ll learn about subclasses in Chapter 5.
+Default (Package Private) Access The method can only be called from classes in the same
+package. This one is tricky because there is no keyword for default access. You simply omit
+the access modifier.
+
+Optional Specifiers
+There are a number of optional specifi ers, but most of them aren’t on the exam. Optional
+specifiers come from the following list. Unlike with access modifi ers, you can have multiple
+specifiers in the same method (although not all combinations are legal). When this happens,
+you can specify them in any order. And since it is optional, you can’t have any of them at
+all. This means you can have zero or more specifiers in a method declaration.
+
+-static Covered later in this chapter. Used for class methods.
+-abstract Covered in Chapter 5. Used when not providing a method body.
+-final Covered in Chapter 5. Used when a method is not allowed to be overridden by a
+subclass.
+-synchronized On the OCP but not the OCA exam.
+-native Not on the OCA or OCP exam. Used when interacting with code written in
+another language such as C++.
+-strictfp Not on the OCA or OCP exam. Used for making fl oating-point calculations
+portable.
+static final or final static - both works.
+
+Return Type
+The next item in a method declaration is the return type. The return type might be an
+actual Java type such as String or int. If there is no return type, the void keyword is used.
+This special return type comes from the English language: void means without contents. In
+Java, we have no type there.
+
+*note*
+void methods can have or not have return statement.
+method with return types require return statement.
+if return type methods don't end up return-ing, it's does not compile.
+
+A vararg parameter
+must be the last element in a method’s parameter list. This implies you are only allowed to
+have one vararg parameter per method.
+
+15: public static void walk(int start, int... nums) {
+16: System.out.println(nums.length);
+17: }
+18: public static void main(String[] args) {
+19: walk(1); // 0
+20: walk(1, 2); // 1
+21: walk(1, 2, 3); // 2
+22: walk(1, new int[] {4, 5}); // 2
+23: }
+
+when varargs are not defined java creates array with length 0.
+also varargs can compile null value but would run exception on runtime when trying to find out length of null.
+
+
+Accessing a vararg parameter is also just like accessing an array. It uses array indexing.
+For example:
+16: public static void run(int... nums) {
+17: System.out.println(nums[1]);
+18: }
+19: public static void main(String[] args) {
+20: run(11, 22); // 22
+21: }
+
+*note*
+you can treat vararg paramters like array when calling them.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
