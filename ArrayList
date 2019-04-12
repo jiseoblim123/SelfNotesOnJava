@@ -45,6 +45,16 @@ list5.add("Sparrow");
 list5.add(Boolean.TRUE); // DOES NOT COMPILE
 
 2. remove()
+remove() will take parameter that is index of List or ArrayList, and remove the designated index and 
+move each element on the right to the left.
+
+For example,
+List<String> numbers = new ArrayList<>();
+numbers.add(1);
+numbers.add(2);
+numbers.remove(1); // this will remove index 1 which is 2. so it will print 1.
+if you want to use remove() parameter as elements, you have to force in a wrapper class like this : remove(new Integer(1)); 
+												    // NOTE THAT THIS METHOD IS DEPRECATED SINCE JAVA 1.9
 3. set()
 4. isEmpty(), size()
 5. clear()
