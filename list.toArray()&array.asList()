@@ -14,11 +14,4 @@ A Cool Trick with Varargs:
 List<String> list = Arrays.asList("one", "two");
 You can have varargs as asList() parameters which lets you convert array to list in one line.
 
-Sorting
-List<Integer> numbers = new ArrayList<>();
-numbers.add(99);
-numbers.add(5);
-numbers.add(81);
-Collections.sort(numbers);
-System.out.println(numbers); [5, 81, 99]
 
