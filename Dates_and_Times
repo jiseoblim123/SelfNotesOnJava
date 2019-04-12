@@ -140,4 +140,13 @@ it's more easy to convert String to Date and Time.
 Example:
 LocalDateTime.parse(DateTimeFormatter.ofPattern("hh:mm"));
 
+Example:
+//		LocalDate d1 = LocalDate.of(2015, 5, 10);
+//		Period p = Period.of(1, 2, 3);
+//		d1 = d1.minus(p);
+//		DateTimeFormatter f = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT);
+//		System.out.println(d1.format(f));
+		 // this is a runtime exception because d1 is date and you are formatting it to Date and time.
+		 // if, LocalDateTime and d1.format(f), which f = .ofLocalizedTime(FormatStyle.SHORT)
+		 // then it would just print time.
 
