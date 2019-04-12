@@ -1,0 +1,51 @@
+Let's talk about creating, manipulating, and formatting dates and times.
+
+Three types of Date and Time:
+1. LocalDate: this is just date like your birthday -- no time, no time zone.
+2. LocalTime: Contains just a time -- no date, no time zone. Example: Midnight
+3. LocalDateTime: Contains both date and time, but no time zone. Example: Midnight of New Year's
+
+System.out.println(LocalDate.now());
+System.out.println(LocalTime.now());
+System.out.println(LocalDateTime.now());
+
+each printed at January 20 at 12:45 p.m.:
+2015-01-20
+12:45:18.401
+2015-01-20T12:45:18.401
+
+Now that you know how to create the current date and time, let’s look at other specifi c
+dates and times. To begin, let’s create just a date with no time. Both of these examples
+create the same date:
+LocalDate date1 = LocalDate.of(2015, Month.JANUARY, 20);
+LocalDate date2 = LocalDate.of(2015, 1, 20); // Java counts 1 as January not 0 for LocalDate, so no worries.
+
+When creating a time, you can choose how detailed you want to be. You can specify just
+the hour and minute, or you can add the number of seconds. You can even add nanoseconds
+if you want to be very precise. (A nanosecond is a billionth of a second—you probably
+won’t need to be that specifi c.)
+LocalTime time1 = LocalTime.of(6, 15); // hour and minute
+LocalTime time2 = LocalTime.of(6, 15, 30); // + seconds
+LocalTime time3 = LocalTime.of(6, 15, 30, 200); // + nanoseconds
+
+Finally, we can combine dates and times:
+Example:
+LocalDate date1 = LocalDate.of(2019, Month.April, 20);
+LocalTime time1 = LocalTime.of(9, 10, 30);
+LocalDateTime dateTime2 = LocalDateTime.of(date1, time2);
+
+
+**
+Did you notice that we did not use a constructor in any of the examples? The date and
+time classes have private constructors to force you to use the static methods.
+So..
+LocalDate d = new LocalDate(); // DOES NOT COMPILE because Date and Time have private constructors; you need to use static methods
+like: 
+LocalDate d = LocalDate.of(2019, 4, 1);
+
+**
+LocalDate.of(2015, Month.JANUARY, 32) // throws DateTimeException ; 32 is out of boundary.
+
+
+
+
