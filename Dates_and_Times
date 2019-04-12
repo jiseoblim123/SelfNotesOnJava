@@ -63,6 +63,11 @@ dateTime = dateTime.minusDays(1); // or plus
 dateTime = dateTime.minusHours(10);
 dateTime = dateTime.minusSeconds(30);
 
+*note*
+Unlike StringBuilder and ArrayList, LocalDate type instance is immutable.
+So you cannnot have LocalDate date = LocalDate.of(2019, 6, 30); and have date do date.plusDays(2); or date.minusYears(2);
+You would have to do : date = date.plusDays(2); or date = date.minusYears(2);
+
 
 REAL LIFE EXAMPLE:
 public static void main(String[] args) {
